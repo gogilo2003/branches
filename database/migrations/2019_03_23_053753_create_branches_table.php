@@ -21,6 +21,7 @@ class CreateBranchesTable extends Migration
             $table->string('box_no')->nullable();
             $table->string('post_code')->nullable();
             $table->string('town')->nullable();
+            $table->string('address')->nullable();
             $table->string('tel')->nullable();
             $table->string('email')->nullable();
             $table->string('facebook')->nullable();

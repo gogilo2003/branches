@@ -21,7 +21,37 @@
 @endsection
 
 @section('content')
-    Put content details
+    <a href="{{ route('admin-branches-add') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Add Branch</a>
+    <hr>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Title</th>
+                <th>Postal Address</th>
+                <th>FaceBook</th>
+                <th>Twitter</th>
+                <th>Youtube</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($branches as $branch)
+                <tr>
+                    <td>{{ $loop->iterator }}</td>
+                    <td>{{ $branch->title }}</td>
+                    <td>P.O. Box {{ $branch->box_no }} - {{ $branch->post_code }}, {{ $branch->town }}</td>
+                    <td>{{ $branch->facebook }}</td>
+                    <td>{{ $branch->twitter }}</td>
+                    <td>{{ $branch->youtube }}</td>
+                    <td>
+                        <a href="{{ route('admin-branches-edit',$branch->id) }}" class="btn btn-success"><i class="fa fa-edit"></i> Edit</a>
+                        <a href="{{ route('admin-branches-delete',$branch->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i> Edit</a>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 @endsection
 
 @section('styles')
