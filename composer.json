@@ -1,0 +1,26 @@
+{
+    "name": "gogilo/branches",
+    "description": "Content Type for gogilo/admin CMS",
+    "require": {
+        "gogilo/admin": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ogilo G. D. Ouma",
+            "email": "gogilo2003@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ogilo\\Eschool\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ogilo\\Eschool\\EschoolServiceProvider"
+            ]
+        }
+    }
+}
