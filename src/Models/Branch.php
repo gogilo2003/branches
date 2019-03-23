@@ -8,6 +8,6 @@ class Branch extends Model
 {
     public function pages()
     {
-        return $this->belongsToMany('Ogilo\Admin\Models\Page');
+        return $this->belongsToMany('Ogilo\Admin\Models\Page')->withTimestamps();
     }
 }

@@ -13,13 +13,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "Ogilo\\Eschool\\": "src/"
+            "Ogilo\\Branches\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Ogilo\\Eschool\\EschoolServiceProvider"
+                "Ogilo\\Branches\\BranchesServiceProvider"
             ]
         }
     }
